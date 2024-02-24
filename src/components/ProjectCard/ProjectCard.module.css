@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 100%;
+  background-image: url("../../assets/circuit2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 2px #fff;
+  text-align: start;
+  gap: 20px;
+  position: relative;
+}
+
+.container:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+h3 {
+  font-family: "Eternal";
+  text-transform: uppercase;
+  font-size: 2rem !important;
+  letter-spacing: 0.5rem;
+}

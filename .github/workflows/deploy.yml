@@ -1,0 +1,29 @@
+name: Deploy Portfolio
+run-name: ${{ github.actor }} is deploying to ${{ github.ref_name }}
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  Build-And-Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Linting
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main
+          folder: dist
