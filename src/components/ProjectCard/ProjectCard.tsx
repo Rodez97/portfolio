@@ -22,14 +22,14 @@ function ProjectCard({
     <article className={styles.container}>
       <h3>{title}</h3>
       <p>{description}</p>
-      <ul className="flex gap-1 list-none">
+      <ul className="flex gap-1 list-none flex-wrap">
         {stack?.map((s) => (
           <li key={s.name}>
             <TechChip {...s} />
           </li>
         ))}
       </ul>
-      <div className="flex gap-5 justify-end absolute -top-5 -right-5">
+      <div className="flex gap-3 justify-end absolute -top-10 -right-3">
         <a
           target="_blank"
           rel="noreferrer noopener"
