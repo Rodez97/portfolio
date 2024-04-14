@@ -4,9 +4,14 @@ import useMediaQueries from "../../hooks/useMediaQueries";
 import { useLongPress } from "use-long-press";
 function Hero() {
   const { md, sm } = useMediaQueries();
-  const bind = useLongPress(() => {
-    alert("Muchas gracias Clara por tu ayuda 😘");
-  });
+  const bind = useLongPress(
+    () => {
+      alert("Muchas gracias Clara por tu ayuda 😘");
+    },
+    {
+      threshold: 3000,
+    }
+  );
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>

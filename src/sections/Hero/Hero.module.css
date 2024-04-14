@@ -42,6 +42,7 @@
     margin-top: 20px;
     animation: appearing 0.5s ease-in-out both;
     letter-spacing: 0.5rem;
+    user-select: none;
   }
 
   & hr {
