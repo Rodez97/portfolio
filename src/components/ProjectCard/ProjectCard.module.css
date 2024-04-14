@@ -25,4 +25,22 @@ h3 {
   text-transform: uppercase;
   font-size: 2rem !important;
   letter-spacing: 0.5rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem !important;
+  }
+}
+
+.link-icons {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+
+  @media (max-width: 768px) {
+    top: -10px;
+  }
+
+  @media (max-width: 480px) {
+    top: -20px;
+  }
 }

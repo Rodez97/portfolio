@@ -32,12 +32,23 @@ function App() {
 
   return (
     <>
-      <main className="holster">
-        <div dir="ltr" className="y-mandatory-scroll-snapping" ref={container}>
-          <Hero />
-          <Projects />
-        </div>
+      <main dir="ltr" className="app-container" ref={container}>
+        <Hero />
+        <Projects />
+        <footer className="text-center text-gray-400 text-xs mt-10 mb-4">
+          <p className="text-sm">Made by Danilo</p>
+
+          <p>
+            with the help of Clara.{" "}
+            <span role="img" aria-label="heart">
+              ❤️
+            </span>
+          </p>
+
+          <p>{new Date().getFullYear()}</p>
+        </footer>
       </main>
+
       <AnimatedBackground />
     </>
   );

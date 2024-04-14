@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import styles from "./ProjectCard.module.css";
 import { IconBrandGithub, IconWorldWww } from "@tabler/icons-react";
 import TechChip from "../TechChip/TechChip";
+import useMediaQueries from "../../hooks/useMediaQueries";
 
 interface ProjectCardProps {
   title: string;
@@ -18,6 +19,7 @@ function ProjectCard({
   ghUrl,
   website,
 }: ProjectCardProps) {
+  const { md, sm } = useMediaQueries();
   return (
     <article className={styles.container}>
       <h3>{title}</h3>
@@ -29,14 +31,14 @@ function ProjectCard({
           </li>
         ))}
       </ul>
-      <div className="flex gap-3 justify-end absolute -top-10 -right-3">
+      <div className={"flex gap-3 justify-end " + styles["link-icons"]}>
         <a
           target="_blank"
           rel="noreferrer noopener"
           href={ghUrl}
           className="transition border-white-800 border p-2 rounded-full bg-slate-500 text-white hover:text-cyan-600 hover:border-cyan-600 hover:bg-white"
         >
-          <IconBrandGithub size={40} />
+          <IconBrandGithub size={sm ? 25 : md ? 30 : 40} />
         </a>
         <a
           target="_blank"
@@ -44,7 +46,7 @@ function ProjectCard({
           href={website}
           className="transition border-white-800 border p-2 rounded-full bg-slate-500 text-white hover:text-cyan-600 hover:border-cyan-600 hover:bg-white"
         >
-          <IconWorldWww size={40} />
+          <IconWorldWww size={sm ? 25 : md ? 30 : 40} />
         </a>
       </div>
     </article>

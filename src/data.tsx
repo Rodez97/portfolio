@@ -26,36 +26,36 @@ import {
 export default {
   heroTitle1: "FRONTEND",
   heroTitle2: "DEVELOPER",
-  heroSubtitle: "Hi all I'm Danilo",
+  heroSubtitle: "Hi all I'm",
   heroDescription:
     "I'm a Web Developer specializing in JavaScript, TypeScript, React, Node.js, Firebase, Stripe, and cloud platforms like Azure and AWS. With a knack for seamless UI/UX and mobile app development using React Native, I transform ideas into captivating digital solutions. Let's collaborate and bring your vision to life.",
-  socials: [
+  socials: (size: number) => [
     {
       name: "linkedin",
       url: "https://www.linkedin.com/in/danilo-pro/",
-      icon: <IconBrandLinkedin size={50} />,
+      icon: <IconBrandLinkedin size={size} />,
     },
     {
       name: "mail",
       url: "mailto:rodez.business@gmail.com",
-      icon: <IconMail size={50} />,
+      icon: <IconMail size={size} />,
     },
     {
       name: "github",
       url: "https://github.com/Rodez97",
-      icon: <IconBrandGithub size={50} />,
+      icon: <IconBrandGithub size={size} />,
     },
   ],
-  stackIcons: [
-    <IconBrandReact size={40} key="react" />,
-    <IconBrandTypescript size={40} key="typescript" />,
-    <IconBrandJavascript size={40} key="javascript" />,
-    <IconBrandHtml5 size={40} key="html5" />,
-    <IconBrandCss3 size={40} key="css3" />,
-    <IconBrandNodejs size={40} key="nodejs" />,
-    <IconBrandRedux size={40} key="redux" />,
-    <IconBrandGit size={40} key="git" />,
-    <IconBrandGithub size={40} key="github" />,
+  stackIcons: (size: number) => [
+    <IconBrandReact size={size} key="react" />,
+    <IconBrandTypescript size={size} key="typescript" />,
+    <IconBrandJavascript size={size} key="javascript" />,
+    <IconBrandHtml5 size={size} key="html5" />,
+    <IconBrandCss3 size={size} key="css3" />,
+    <IconBrandNodejs size={size} key="nodejs" />,
+    <IconBrandRedux size={size} key="redux" />,
+    <IconBrandGit size={size} key="git" />,
+    <IconBrandGithub size={size} key="github" />,
   ],
   projects: [
     {

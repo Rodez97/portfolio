@@ -1,6 +1,6 @@
 .container {
   margin: 0;
-  height: 100vh;
+  height: calc(100 * var(--vh) / 100);
   font-weight: 100;
   background: radial-gradient(#242424, #000000);
   -webkit-overflow-y: hidden;
